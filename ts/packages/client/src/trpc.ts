@@ -5,7 +5,7 @@ export const trpc = createTRPCClient<AppRouter>({
   links: [
     loggerLink(),
     unstable_httpBatchStreamLink({
-      url: '/api',
+      url: '/trpc',
     }),
   ],
 })

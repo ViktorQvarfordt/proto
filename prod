@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+NODE_ENV=production bun run ts/packages/server/src/index.ts

@@ -30,3 +30,9 @@ bun i
 # From repo root
 ./dev
 ```
+
+**Deploy**
+
+```
+./deploy
+```

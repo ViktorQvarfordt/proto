@@ -1,5 +1,7 @@
-import { createHTTPServer } from '@trpc/server/adapters/standalone'
 import { publicProcedure, router } from './trpc'
+import * as trpcExpress from '@trpc/server/adapters/express'
+import express from 'express'
+import * as path from 'node:path'
 
 const appRouter = router({
   singular: publicProcedure.query(() => {
@@ -16,12 +18,20 @@ const appRouter = router({
 
 export type AppRouter = typeof appRouter
 
-const server = createHTTPServer({
-  router: appRouter,
-})
+const app = express()
+
+// Serve client from the server, allowing for simple deployment and bypassing cors issues.
+app.use('/', express.static(path.resolve(__dirname, '../../client/dist')))
+
+app.use(
+  '/trpc',
+  trpcExpress.createExpressMiddleware({
+    router: appRouter,
+  }),
+)
 
 const port = 3001
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
 })

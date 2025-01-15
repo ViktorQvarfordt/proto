@@ -4,6 +4,10 @@
 		"dev": "bun run --watch src/index.ts"
 	},
 	"dependencies": {
-		"@trpc/server": "^11.0.0-rc.700"
+		"@trpc/server": "^11.0.0-rc.700",
+		"express": "^4.21.2"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0"
 	}
 }

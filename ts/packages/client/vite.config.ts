@@ -19,10 +19,9 @@ export default defineConfig({
     strictPort: true,
     port: 3000,
     proxy: {
-      '/api': {
+      '/trpc': {
         target: 'http://127.0.0.1:3001',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
