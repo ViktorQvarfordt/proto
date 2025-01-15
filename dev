@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$TERM_PROGRAM" != "iTerm.app" ]; then
+    echo "Requires iTerm2"
+    exit 1
+fi
+
+osascript << EOF
+    tell application "$TERM_PROGRAM"
+        activate
+
+        select first window
+
+        tell current window
+            set theTab to current tab
+        end tell
+
+
+        # Create two columns (the first is already there)
+
+        tell first session in theTab
+            split vertically with default profile
+        end tell
+
+
+        # Start commands in panes
+
+        tell first session of theTab
+            write text "cd ts/packages/client"
+            write text "bun dev"
+        end tell
+
+        tell second session of theTab
+            write text "cd ts/packages/server"
+            write text "bun dev"
+        end tell
+    end tell
+EOF

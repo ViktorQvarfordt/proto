@@ -1,0 +1,43 @@
+{
+	"include": ["packages/**/*.ts", "packages/**/*.tsx"],
+	"exclude": ["**/node_modules/**"],
+
+	"compilerOptions": {
+		"strict": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		"isolatedModules": true,
+
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+
+		"noEmit": true,
+		"strictNullChecks": true,
+		"useDefineForClassFields": true,
+		"incremental": false,
+		"forceConsistentCasingInFileNames": true,
+		"experimentalDecorators": true,
+
+		"jsx": "react-jsx",
+
+		"lib": ["esnext", "dom", "dom.iterable"],
+
+		"target": "ES2022",
+		"module": "ES2022",
+		"moduleResolution": "Bundler",
+		"allowImportingTsExtensions": false,
+		"resolveJsonModule": true,
+
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true
+	}
+}

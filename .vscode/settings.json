@@ -1,0 +1,8 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"typescript.tsdk": "ts/node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"typescript.updateImportsOnFileMove.enabled": "always"
+}

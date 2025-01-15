@@ -1,0 +1,39 @@
+{
+	"files": {
+		"ignore": ["**/node_modules/**", "**/client/dist/**"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"useAltText": "off",
+				"useButtonType": "off",
+				"useIframeTitle": "off",
+				"useKeyWithClickEvents": "off",
+				"useValidAriaRole": "off",
+				"noBlankTarget": "off"
+			},
+			"performance": {
+				"noDelete": "off"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			},
+			"style": {
+				"useNumberNamespace": "off"
+			}
+		}
+	},
+
+	"javascript": {
+		"formatter": {
+			"semicolons": "asNeeded",
+			"quoteStyle": "single",
+			"jsxQuoteStyle": "single",
+			"indentStyle": "space",
+			"lineWidth": 120
+		}
+	}
+}

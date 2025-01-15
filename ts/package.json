@@ -1,0 +1,16 @@
+{
+	"name": "proto",
+	"workspaces": ["packages/*"],
+	"scripts": {
+		"check:ts": "tsc --noEmit",
+		"check:biome": "biome check --write",
+		"check": "npm run check:ts && npm run check:biome"
+	},
+	"dependencies": {
+		"zod": "^3.24.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"typescript": "^5.7.3"
+	}
+}
