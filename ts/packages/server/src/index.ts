@@ -35,3 +35,8 @@ const port = 3001
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
 })
+
+process.on('SIGINT', () => {
+  console.log('Received SIGINT.')
+  process.exit(0)
+})
