@@ -22,6 +22,8 @@ const app = express()
 
 // Serve client from the server, allowing for simple deployment and bypassing cors issues.
 app.use('/', express.static(path.resolve(__dirname, '../../client/dist')))
+// Serve the client index.html file for all routes.
+app.get('*', (_, res) => res.sendFile(path.resolve(__dirname, '../../client/dist/index.html')))
 
 app.use(
   '/trpc',

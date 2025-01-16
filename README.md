@@ -33,6 +33,17 @@ bun i
 
 **Deploy**
 
+The app (server and client) is built from one Dockerfile and can easily be deployed to Fly.io.
+
 ```
-./deploy
+cd ts
+fly launch # First time, and you get a fly.toml file
+fly deploy # Subsequent deploys
+```
+
+Try out the prod build locally:
+
+```
+cd ts
+docker build -t test . && docker run --rm -p 3001:3001 test
 ```
