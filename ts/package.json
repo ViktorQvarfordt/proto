@@ -4,7 +4,8 @@
 	"scripts": {
 		"check:ts": "tsc --noEmit",
 		"check:biome": "biome check --write",
-		"check": "npm run check:ts && npm run check:biome"
+		"check": "npm run check:ts && npm run check:biome",
+		"start": "bun run packages/server/src/index.ts"
 	},
 	"dependencies": {
 		"zod": "^3.24.1"
