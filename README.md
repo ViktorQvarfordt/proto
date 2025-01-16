@@ -1,19 +1,17 @@
 # Proto
 
-This proto-repo exists to bootstrap new projects.
-
-It's a fullstack monorepo with a server and client.
+Fullstack monorepo with a server and client.
 
 - TypeScript
 - React
-- Vite
-- React Router
 - tRPC
+- Vite
 - Zod
 - Bun
-- Biome
-- Styled Components
 - Jotai
+- Biome
+- React Router
+- Styled Components
 
 ## Dev
 

@@ -5,7 +5,8 @@
 	},
 	"dependencies": {
 		"@trpc/server": "^11.0.0-rc.700",
-		"express": "^4.21.2"
+		"express": "^4.21.2",
+		"shared": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/express": "^5.0.0"

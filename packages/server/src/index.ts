@@ -39,6 +39,6 @@ app.listen(port, () => {
 })
 
 process.on('SIGINT', () => {
-  console.log('Received SIGINT.')
+  console.log('Received SIGINT. Terminating.')
   process.exit(0)
 })

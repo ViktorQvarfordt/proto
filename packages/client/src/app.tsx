@@ -7,7 +7,7 @@ const streamDataAtom = atom<{ status: 'running' | 'idle'; data: number[] }>({
   data: [],
 })
 
-// Separate component just to demonstrate atoms
+// Separate component to demonstrate atoms
 const StreamData = () => {
   const streamData = useAtomValue(streamDataAtom)
 
