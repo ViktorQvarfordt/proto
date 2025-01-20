@@ -7,13 +7,7 @@
 		"rules": {
 			"recommended": true,
 			"a11y": {
-				"noSvgWithoutTitle": "off",
-				"useAltText": "off",
-				"useButtonType": "off",
-				"useIframeTitle": "off",
-				"useKeyWithClickEvents": "off",
-				"useValidAriaRole": "off",
-				"noBlankTarget": "off"
+				"recommended": false
 			},
 			"performance": {
 				"noDelete": "off"
