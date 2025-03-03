@@ -20,14 +20,17 @@
 			}
 		}
 	},
-
+	"organizeImports": {
+		"enabled": true
+	},
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded",
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single",
 			"indentStyle": "space",
-			"lineWidth": 120
+			"lineWidth": 120,
+			"arrowParentheses": "asNeeded"
 		}
 	}
 }
